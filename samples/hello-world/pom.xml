@@ -53,7 +53,7 @@
                 <version>2.0</version>
                 <configuration>
                     <path>/</path> <!--/argo -->
-                    <port>80</port>
+                    <port>8080</port>
                 </configuration>
             </plugin>
 
@@ -69,12 +69,12 @@
 					<scanIntervalSeconds>0</scanIntervalSeconds>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>80</port>
+							<port>8080</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
 					<webAppConfig>
-						<contextPath>/</contextPath>
+						<contextPath>/hello-world</contextPath>
 					</webAppConfig>
 				</configuration>
 			</plugin>

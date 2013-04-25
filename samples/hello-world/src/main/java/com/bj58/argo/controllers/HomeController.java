@@ -16,12 +16,12 @@ public class HomeController extends AbstractController {
 
     @Path("")
     public ActionResult home() {
-//        System.out.println(1);
-        return view("index"); // velocity模板是 /src/main/java/resources/views/index.html
+        // velocity模板是 /src/main/java/resources/views/index.html
+        return view("index");
     }
 
     @Path("post.html")
-    @POST  // 只处理post的请求
+    @POST
     public ActionResult postForm() {
 
         BeatContext beat = beat();
@@ -47,7 +47,7 @@ public class HomeController extends AbstractController {
                 .add("submit", client.form("submit"));
 
 
-        return view("post"); // resources/views/post.html velocity模板
+        return view("post");
 
     }
 
@@ -57,7 +57,7 @@ public class HomeController extends AbstractController {
      *
      */
     @Path("post-upload.html")
-    @POST  // 只处理post的请求
+    @POST
     public ActionResult postUpload() {
 
         BeatContext beat = beat();
@@ -91,7 +91,7 @@ public class HomeController extends AbstractController {
 
 
 
-        return view("post-upload"); // resources/views/post-upload.html velocity模板
+        return view("post-upload");
 
     }
 }
